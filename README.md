@@ -6,9 +6,9 @@ pkg install git
 
 pkg install python -y
 
-git clone https://github.com/C/CPMElsedev.git
+git clone https://github.com/CPMTooldev/CARParktool.git
 
-cd CPMElsedev
+cd CARParktool
 
 git pull
 
