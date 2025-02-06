@@ -83,7 +83,7 @@ def load_key_data(cpm):
     
     print(Colorate.Horizontal(Colors.rainbow, '========[ ACCESS KEY DETAILS ]========'))
     
-    print(Colorate.Horizontal(Colors.rainbow, f'Access Key : {data.get("access_key")}.'))
+    print(Colorate.Horizontal(Colors.black, f'Access Key : {data.get("access_key")}.'))
     
     print(Colorate.Horizontal(Colors.rainbow, f'Telegram ID: {data.get("telegram_id")}.'))
     
@@ -103,8 +103,8 @@ def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
     print(Colorate.Horizontal(Colors.rainbow, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
-    print(Colorate.Horizontal(Colors.rainbow, f'Ip Address : {data.get("query")}.'))
-    print(Colorate.Horizontal(Colors.rainbow, f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
+    print(Colorate.Horizontal(Colors.black, f'Ip Address : {data.get("query")}.'))
+    print(Colorate.Horizontal(Colors.black, f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
     print(Colorate.Horizontal(Colors.rainbow, f'Country    : {data.get("country")} {data.get("zip")}.'))
     print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
 
@@ -163,9 +163,9 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
-            print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money           1,000₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins           3,500₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                4,000₮'))
+            print(Colorate.Horizontal(Colors.green, '{01}: Increase Money           1,000₮'))
+            print(Colorate.Horizontal(Colors.yellow, '{02}: Increase Coins           3,500₮'))
+            print(Colorate.Horizontal(Colors.yellow, '{03}: King Rank                4,000₮'))
             print(Colorate.Horizontal(Colors.rainbow, '{04}: Change ID                3,500₮'))
             print(Colorate.Horizontal(Colors.rainbow, '{05}: Change Name              100₮'))
             print(Colorate.Horizontal(Colors.rainbow, '{06}: Change Name (Rainbow)    100₮'))
