@@ -7,7 +7,7 @@ import time
 import signal
 import sys
 from threading import Thread
-from PIL import ImageGrab
+from rich.console import ImageGrab
 from rich.console import Console
 from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
