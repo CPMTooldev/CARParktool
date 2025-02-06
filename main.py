@@ -13,8 +13,8 @@ from pystyle import Colors, Colorate
 
 from cpmtooldev import CPMTooldev
 
-__CHANNEL_USERNAME__ = "CPMTooldev"
-__GROUP_USERNAME__   = "CPMTooldevchat"
+__CHANNEL_USERNAME__ = "TelmunnDev"
+__GROUP_USERNAME__   = "BaldanShopChat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -39,7 +39,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "Car Parking Multiplayer 1 Tool - t.me/Telmunn"
+    brand_name =  "Car Parking Multiplayer 1 Tool - t.me/Kayzen1P"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -163,28 +163,28 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
-            print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money           0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins           0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{04}: Change ID                0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{05}: Change Name              0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{06}: Change Name (Rainbow)    0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{07}: Number Plates            0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{08}: Account Delete           FREE'))
-            print(Colorate.Horizontal(Colors.rainbow, '{09}: Account Register         FREE'))
-            print(Colorate.Horizontal(Colors.rainbow, '{10}: Delete Friends           0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{11}: Unlock Paid Cars         0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{12}: Unlock all Cars          0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{13}: Unlock all Cars Siren    0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{14}: Unlock w16 Engine        0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{15}: Unlock All Horns         0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{16}: Unlock Disable Damage    0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{17}: Unlock Unlimited Fuel    0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{18}: Unlock House 3           0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{19}: Unlock Smoke             0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{20}: Change Race Wins         0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{21}: Change Race Loses        0₮'))
-            print(Colorate.Horizontal(Colors.rainbow, '{22}: Clone Account            0₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money           1,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins           3,500₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                4,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{04}: Change ID                3,500₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{05}: Change Name              100₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{06}: Change Name (Rainbow)    100₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{07}: Number Plates            2,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{08}: Account Delete           Үнэгүй'))
+            print(Colorate.Horizontal(Colors.rainbow, '{09}: Account Register         Үнэгүй'))
+            print(Colorate.Horizontal(Colors.rainbow, '{10}: Delete Friends           5₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{11}: Unlock Paid Cars         4,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{12}: Unlock all Cars          3,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{13}: Unlock all Cars Siren    2,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{14}: Unlock w16 Engine        3,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{15}: Unlock All Horns         3,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{16}: Unlock Disable Damage    2,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{17}: Unlock Unlimited Fuel    2,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{18}: Unlock House 3           3,500₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{19}: Unlock Smoke             2,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{20}: Change Race Wins         1,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{21}: Change Race Loses        1,000₮'))
+            print(Colorate.Horizontal(Colors.rainbow, '{22}: Clone Account            5,000₮'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌☆ ]==============='))
