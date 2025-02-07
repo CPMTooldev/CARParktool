@@ -74,22 +74,7 @@ def load_player_data(cpm):
             exit(1)
     else:
         print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
-        exit(1)
-
-
-def load_key_data(cpm):
-
-    data = cpm.get_key_data()
-    print(data)
-    print(Colorate.Horizontal(Colors.rainbow, '========[ ACCESS KEY DETAILS ]========'))
-    
-    print(Colorate.Horizontal(Colors.rainbow, f'Access Key : {data.get("access_key")}.'))
-    
-    print(Colorate.Horizontal(Colors.rainbow, f'Telegram ID: {data.get("telegram_id")}.'))
-    
-    print(Colorate.Horizontal(Colors.rainbow, f'Balance $  : {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}.'))
-        
-    
+        exit(1)  
 
 def prompt_valid_value(content, tag, password=False):
     while True:
