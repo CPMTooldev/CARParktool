@@ -609,7 +609,7 @@ if __name__ == "__main__":
             elif service == 27: # Hack Car Speed (299hp)
                 console.print("[bold yellow][!] Note[/bold yellow]: original speed can not be restored !.")
                 console.print("[bold cyan][!] Enter Car Details.[/bold cyan]")
-                car_id = IntPrompt.ask("[bold][?] Car ID[/bold]")
+                account_get_car = IntPrompt.ask("[bold][?] Car ID[/bold]")
                 console.print("[bold cyan][%] Hacking Car Speed[/bold cyan]: ", end=None)
                 if cpm.account_hack_car_speed(car_id):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
