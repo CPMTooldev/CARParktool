@@ -606,27 +606,27 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
                     continue
                 else:
-            elif  service == 27:
-                account_hack_car_speed(carID):
-                car = get_car(carID)
-                if car['ok']:
-                new_car = car['data']
+                  elif  service == 27:
+                  account_hack_car_speed(carID):
+                  car = get_car(carID)
+                  if car['ok']:
+                  new_car = car['data']
                     print(f"Hacked car speed for car ID {carID}")
                 else: 
                     print("Failed to retrieve car data.")
 
                 def main():
                 cars = get_all_cars()
-    if cars['ok']:
-        for car in cars['data']:
-            print(f"Car ID: {car['id']}")
-        car_id = cars['data'][0]['id']
-    else:
-        print("Failed to retrieve cars.")
-        return
+                if cars['ok']:
+                for car in cars['data']:
+                print(f"Car ID: {car['id']}")
+                car_id = cars['data'][0]['id']
+               else:
+           print("Failed to retrieve cars.")
+           return
     
-    account_hack_car_speed(car_id)
+           account_hack_car_speed(car_id)
 
-if __name__ == "__main__":
-    main()
+        if __name__ == "__main__":
+        main()
            
