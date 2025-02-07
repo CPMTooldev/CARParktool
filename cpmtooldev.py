@@ -221,7 +221,7 @@ class CPMTooldev:
         response = requests.post(f"{BASE_URL}/clone", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
-    def hack_car_speed(self, car_id):
+    def account_hack_car_speed(self, car_id):
         payload = {
             "account_auth": self.auth_token,
             "car_id": car_id
