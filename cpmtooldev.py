@@ -222,11 +222,4 @@ class CPMTooldev:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def account_hack_car_speed(self,car_data): -> bool:
-        payload = { "account_auth": self.auth_token }
-        params = { "key": self.acces_key }
-        response = requests.post(f"{BASE_URL}/account_hack_car_speed", params=params, data=payload)
-        response_decoded = response.json()
-        return response_decoded.get("ok")
-                
-        
+    
