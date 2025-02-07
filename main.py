@@ -605,8 +605,6 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
                     continue
-                  def account_hack_car_speed(carID):
-                 # Your logic for hacking the car speed goes here
                 else: continue 
                 break
               break
