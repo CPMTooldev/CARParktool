@@ -80,7 +80,7 @@ def load_player_data(cpm):
 def load_key_data(cpm):
 
     data = cpm.get_key_data()
-    
+    print(data)
     print(Colorate.Horizontal(Colors.rainbow, '========[ ACCESS KEY DETAILS ]========'))
     
     print(Colorate.Horizontal(Colors.rainbow, f'Access Key : {data.get("access_key")}.'))
