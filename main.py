@@ -618,6 +618,6 @@ if __name__ == "__main__":
                     if answ == "y": console.print("[bold yellow][!] Thank You for using our tool.[/bold yellow].")
                     sleep(2)
                     continue
-                else:continue
-                break
+              else: continue
               break
+            break
