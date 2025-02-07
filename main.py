@@ -606,36 +606,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
                     continue
                   def account_hack_car_speed(carID):
-    # Your logic for hacking the car speed goes here
-    pass
-
-def get_car(carID):
-    # Simulating the car retrieval process (replace with actual code)
-    return {'ok': True, 'data': {'id': carID, 'speed': 100}}
-
-def get_all_cars():
-    # Simulating the retrieval of all cars (replace with actual code)
-    return {'ok': True, 'data': [{'id': 1}, {'id': 2}, {'id': 3}]}
-
-elif service == 27:
-    account_hack_car_speed(carID)
-    car = get_car(carID)
-    if car['ok']:
-        new_car = car['data']
-        print(f"Hacked car speed for car ID {carID}")
-    else:
-        print("Failed to retrieve car data.")
-
-def main():
-    cars = get_all_cars()
-    if cars['ok']:
-        for car in cars['data']:
-            print(f"Car ID: {car['id']}")
-            car_id = car['id']  # Make sure to use the current car's ID, not the first one
-            account_hack_car_speed(car_id)
-    else:
-        print("Failed to retrieve cars.")
-        return
-
-if __name__ == "__main__":
-    main()
+                 # Your logic for hacking the car speed goes here
+                else: continue 
+                break
+              break
