@@ -620,11 +620,12 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
-                        else: continue
-                 print(Colorate.Horizontal(Colors.red, 'FAILED.'))
-                 print(Colorate.Horizontal(Colors.red, 'Please try again.'))
-                 sleep(2)
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                    
+                    print(Colorate.Horizontal(Colors.red, 'FAILED.'))
+                    print(Colorate.Horizontal(Colors.red, 'Please try again.'))
+                    sleep(2)
                  continue
              else:
                  print(Colorate.Horizontal(Colors.red, 'INVALID INPUT. Steering intensity must be between 1 and 900.'))
