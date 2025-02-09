@@ -606,6 +606,17 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
                     sleep(2)
                     continue
+            elif service == 27:
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Enter the steering intensity (1-900).'))
+                intensity = IntPrompt.ask("[?] Intensity")
+                if 1 <= intensity <= 900:
+                    if cpm.car_steering(intensity):
+                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    else:
+                        print(Colorate.Horizontal(Colors.red, 'FAILED. TRY AGAIN.'))
+                else:
+                    print(Colorate.Horizontal(Colors.red, 'INVALID INTENSITY. MUST BE 1-900.'))
+                sleep(2)
             else: continue
             break
         break
