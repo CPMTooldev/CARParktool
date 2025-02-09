@@ -608,22 +608,20 @@ if __name__ == "__main__":
                     continue
                  else: 
             elif service == 27:  # Car Steering
-                     print(Colorate.Horizontal(Colors.rainbow, '[?] Insert the steering intensity (1-900).'))
-    
-                 try:
-                    intensity = IntPrompt.ask("[?] Steering Intensity (1-900)")
-        
-                    if 1 <= intensity <= 900:
-                    if cpm.car_steering(intensity):  # Ensure the function call passes the parameter
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                else:
-                    print(Colorate.Horizontal(Colors.red, 'FAILED - Car Steering Activation Unsuccessful!'))
-                else:
-                    print(Colorate.Horizontal(Colors.red, 'INVALID INPUT - Steering intensity must be between 1 and 900.'))
-    
-              except ValueError:
-                    print(Colorate.Horizontal(Colors.red, 'INVALID INPUT - Please enter a valid number.'))
-    
-    sleep(2)
-        
+    print(Colorate.Horizontal(Colors.rainbow, '[?] Insert the steering intensity (1-900).'))
 
+    try:
+        intensity = IntPrompt.ask("[?] Steering Intensity (1-900)")
+
+        if 1 <= intensity <= 900:
+            if cpm.car_steering(intensity):  # Correct function call
+                print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+            else:
+                print(Colorate.Horizontal(Colors.red, 'FAILED - Car Steering Activation Unsuccessful!'))
+        else:
+            print(Colorate.Horizontal(Colors.red, 'INVALID INPUT - Steering intensity must be between 1 and 900.'))
+
+    except ValueError:
+        print(Colorate.Horizontal(Colors.red, 'INVALID INPUT - Please enter a valid number.'))
+
+    sleep(2)
