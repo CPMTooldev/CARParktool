@@ -631,6 +631,6 @@ if __name__ == "__main__":
                  print(Colorate.Horizontal(Colors.red, 'INVALID INPUT. Steering intensity must be between 1 and 900.'))
                  sleep(2)
                  continue
-           else: continue
+            else: continue
       continue 
 break
