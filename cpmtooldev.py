@@ -221,4 +221,10 @@ class CPMTooldev:
         response = requests.post(f"{BASE_URL}/clone", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
-    
+   
+    def car_steering(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{BASE_URL}/car_steering", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
