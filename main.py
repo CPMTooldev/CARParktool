@@ -606,21 +606,24 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
                     sleep(2)
                     continue
-            elif service == 27:
-    print(Colorate.Horizontal(Colors.rainbow, '[?] Enter the steering intensity (1-900).'))
-
-    try:
-        intensity = IntPrompt.ask("[?] Intensity")
-
-        if 1 <= intensity <= 900:
-            if cpm.car_steering(intensity):
+            elif service == 27:  # Adjust Car Steering
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Enter the Car ID for which you want to adjust the steering angle.'))
+                car_id = IntPrompt.ask("[?] Car ID")
+    
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Insert the steering angle you want (1-900).'))
+                intensity = IntPrompt.ask("[?] Steering Angle (1-900)")
+                console.print("[%] Saving your data: ", end=None)
+    
+                if 1 <= intensity <= 900:  # Validate intensity range
+                if cpm.car_steering(car_id, intensity):  # Pass car ID and intensity to the method
                 print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                print(Colorate.Horizontal(Colors.rainbow, '======================================'))
+                else: continue
             else:
-                print(Colorate.Horizontal(Colors.red, 'FAILED. TRY AGAIN.'))
-        else:
-            print(Colorate.Horizontal(Colors.red, 'INVALID INTENSITY. MUST BE BETWEEN 1 AND 900.'))
-
-    except ValueError:
-        print(Colorate.Horizontal(Colors.red, 'INVALID INPUT. PLEASE ENTER A VALID NUMBER.'))
-
-    sleep(2)
+                print(Colorate.Horizontal(Colors.red, 'FAILED.'))
+                print(Colorate.Horizontal(Colors.red, 'Please try again.'))
+                sleep(2)
+                continue
+        else: continue
+        break   
+    break
