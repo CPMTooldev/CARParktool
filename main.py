@@ -614,7 +614,8 @@ if __name__ == "__main__":
                 intensity = IntPrompt.ask("[?] Steering Angle (1-900)")
                 console.print("[%] Saving your data: ", end=None)
     
-                if 1 <= intensity <= 900:  # Validate intensity range
+                if 1 <= intensity <= 900:
+                print("valid intensity")# Validate intensity range
                 if cpm.car_steering(car_id, intensity):  # Pass car ID and intensity to the method
                 print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                 print(Colorate.Horizontal(Colors.rainbow, '======================================'))
