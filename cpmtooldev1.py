@@ -195,3 +195,24 @@ class CPMTooldev:
         response = requests.post(f"{__ENDPOINT_URL__}/hack_car_speed", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+
+    def unlock_wheels(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{BASE_URL}/unlock_wheels", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
+
+    def unlock_equipments_male(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{BASE_URL}/unlock_equipments_male", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
+
+    def unlock_equipments_female(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{BASE_URL}/unlock_equipments_female", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
