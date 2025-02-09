@@ -1,16 +1,8 @@
-##############################################################################
-# Copyright (C) trese xeno <me@trese_xeno> - All Rights Reserved             #
-# Unauthorized copying of this file, via any medium is strictly prohibited   #
-# Proprietary and confidential                                               #
-##############################################################################
-# Written by trese xeno <me@trese_xeno>, 16, Jan, 2025.                      #
-##############################################################################
-
 import requests
 
-__ENDPOINT_URL__: str = "https://cpmnuker.Trese.xeno/api"
+__ENDPOINT_URL__: str = "https://telmunnshop.squareweb.app/api"
 
-class CPMNuker:
+class CPMTooldev:
     def __init__(self, access_key) -> None:
         self.auth_token = None
         self.access_key = access_key
@@ -194,13 +186,6 @@ class CPMNuker:
         response_decoded = response.json()
         return response_decoded.get("ok")
     
-    def unlock_lambo_ios_hs(self) -> bool:
-        payload = { "account_auth": self.auth_token }
-        params = { "key": self.access_key }
-        response = requests.post(f"{__ENDPOINT_URL__}/unlock_lambo_ios_hs", params=params, data=payload)
-        response_decoded = response.json()
-        return response_decoded.get("ok")
-    
     def hack_car_speed(self, car_id):
         payload = {
             "account_auth": self.auth_token,
@@ -208,25 +193,5 @@ class CPMNuker:
         }
         params = { "key": self.access_key }
         response = requests.post(f"{__ENDPOINT_URL__}/hack_car_speed", params=params, data=payload)
-        response_decoded = response.json()
-        return response_decoded.get("ok")
-    
-    def remove_front_bumper(self, car_id):
-        payload = {
-            "account_auth": self.auth_token,
-            "car_id": car_id
-        }
-        params = { "key": self.access_key }
-        response = requests.post(f"{__ENDPOINT_URL__}/remove_front_bumper", params=params, data=payload)
-        response_decoded = response.json()
-        return response_decoded.get("ok")
-    
-    def remove_rear_bumper(self, car_id):
-        payload = {
-            "account_auth": self.auth_token,
-            "car_id": car_id
-        }
-        params = { "key": self.access_key }
-        response = requests.post(f"{__ENDPOINT_URL__}/remove_rear_bumper", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
