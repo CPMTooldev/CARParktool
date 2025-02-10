@@ -614,7 +614,7 @@ if __name__ == "__main__":
                 if cpm.hack_car_speed(car_id):
                     console.print("[bold green]SUCCESFUL (✔)[/bold green]")
                     console.print("================================")
-                    answ = Prompt.ask("[bold cyan][?] Do You want to Exit ?[/bold cyan]", choices=["y","n",], defaults="n"
+                    answ = Prompt.ask("[bold cyan][?] Do You want to Exit ?[/bold cyan]", choices=["y","n",], defaults="n")
                     if answ == "y": console.print("[bold yellow][!]thx.[/bold yellow].")
                     else: continue
             else:
