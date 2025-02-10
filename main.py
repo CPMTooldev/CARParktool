@@ -618,11 +618,11 @@ if __name__ == "__main__":
                    if answ == "y": console.print("[bold yellow][!] Thank You for using our tool.[/bold yellow].")
                    else: continue
                  else:
-                    console.print("[bold red]FAILED (✘)[/bold red]")
-                    console.print("[bold yellow][!] Please try again.[/bold yellow]")
-                    sleep(2)
-                    continue
-            else:
-                continue
-            break
-        break
+                   console.print("[bold red]FAILED (✘)[/bold red]")
+                   console.print("[bold yellow][!] Please try again.[/bold yellow]")
+                   sleep(2)
+                   continue
+              else:
+                 continue
+               break
+             break
