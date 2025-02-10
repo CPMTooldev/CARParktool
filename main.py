@@ -622,7 +622,7 @@ if __name__ == "__main__":
                 console.print("[bold yellow][!] Please try again.[/bold yellow]")
                 sleep(2)
                 continue
-           else:
+            else:
              continue
            break
          break
