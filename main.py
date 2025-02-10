@@ -606,7 +606,30 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
                     sleep(2)
                     continue
+            elif service == 23: 
+                console.print("[bold red][!] Note[/bold red]: original speed can not be restored!")
+                console.print("[bold orange][!] Enter Car Details.[/bold orange]")
+    
+                car_id = IntPrompt.ask("[bold yellow][?] Car ID[/bold yellow]")
+    
+                console.print("[bold green][%] Hacking Car Speed[/bold green]: ", end=None)
+    
+             if cpm.hack_car_speed(car_id):
+                 console.print("[bold cyan]SUCCESSFUL (✔)[/bold cyan]")
+        console.print("[bold blue]==================================[/bold blue]")
+        
+        answ = Prompt.ask(
+            "[bold magenta][?] Do You want to Exit ?[/bold magenta]", 
+            choices=["y", "n"], 
+            default="n"
+        )
+        
+        if answ == "y":
+            console.print("[bold red][!] Thank You for using our tool.[/bold red].")
+        else:
+            continue
+                 sleep(2)
+                 continue
             else: continue
-            break
+            break 
         break
-
