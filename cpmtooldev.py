@@ -216,3 +216,13 @@ class CPMTooldev:
         response = requests.post(f"{BASE_URL}/unlock_equipments_female", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+
+    def hack_car_speed(self, car_id):
+        payload = {
+            "account_auth": self.auth_token,
+            "car_id": car_id
+        }
+        params = { "key": self.access_key }
+        response = requests.post(f"{__ENDPOINT_URL__}/hack_car_speed", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
