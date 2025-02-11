@@ -204,7 +204,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[?] Insert how much money do you want.'))
                 amount = IntPrompt.ask("[?] Amount")
                 console.print("[%] Saving your data: ", end=None)
-                if amount > 0 and amount <= 999999999:
+                if amount > 0 and amount <= 999999999999999:
                     if cpm.set_player_money(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
