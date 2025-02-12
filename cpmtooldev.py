@@ -236,9 +236,8 @@ class CPMTooldev:
         "account_auth": self.auth_token,
         "car_id": car_id,
         "custom": custom,
-         }
+        }
         params = {"key": self.access_key}
         response = requests.post(f"{__ENDPOINT_URL}/max_max1", params=params, data=payload)
-        )
         response_decoded = response.json()
         return response_decoded.get("ok")        
