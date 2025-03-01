@@ -605,7 +605,7 @@ if __name__ == "__main__":
                     else: continue
                 else:     
                     print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, '[!] THAT RECIEVER ACCOUNT IS GMAIL PASSWORD IS NOT VALID OR THAT ACCOUNT IS NOT REGISTERED.'))
                     sleep(2)
                     continue
             elif service == 27:
