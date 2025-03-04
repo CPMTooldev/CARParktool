@@ -642,13 +642,13 @@ if __name__ == "__main__":
                     continue
             elif service == 29: # tire
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
-                car_id = IntPrompt.ask("[white][?] CAR ID[/red]")
+                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER PERCENTAGE'))
-                custom = IntPrompt.ask("[pink][?]﻿ENTER PERCENTAGE TIRES U WANT[/red]")                
-                console.print("[white][%] Setting Percentage For U [red]<3 [/red]: ", end=None)
+                custom = IntPrompt.ask("[pink][?]﻿ENTER PERCENTAGE TIRES U WANT[/pink]")                
+                console.print("[red][%] Setting Percentage For U<3 [/red]: ", end=None)
                 if cpm.max_max2(car_id, custom):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
-                    answ = Prompt.ask("[bold green][?] DO YOU WANT TO EXIT[/red] ?", choices=["y", "n"], default="n")
+                    answ = Prompt.ask("[bold green][?] DO YOU WANT TO EXIT[/bold green] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
                     else: continue
                 else:
