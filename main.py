@@ -646,7 +646,7 @@ if __name__ == "__main__":
                 car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER PERCENTAGE'))
                 custom = IntPrompt.ask("[pink][?]﻿ENTER PERCENTAGE TIRES U WANT[/pink]")                
-                console.print("[red][%] Setting Percentage For U<3 [/red]: ", end=None)
+                console.print("[red][%] Setting Percentage [/red]: ", end=None)
                 if cpm.max_max2(car_id, custom):
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     answ = Prompt.ask("[bold green][?] DO YOU WANT TO EXIT[/bold green] ?", choices=["y", "n"], default="n")
