@@ -641,11 +641,12 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
             elif service == 29:
-                console.print("[bold yellow][!] Note[/bold yellow]: Original Tyre Can Not Be Restored!.")
-                console.print("[bold cyan][!] Enter Car Details[/bold cyan]")
-                car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
-                console.print("[bold cyan][%] Setting Car Tyre To 0[/bold cyan]:",end=None)
-                if cpm.hack_car_tyre(car_id):
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER CAR DETALIS'))
+                car_id = IntPrompt.ask("[red][?] CAR ID[/red]")
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER STEERING ANGLE'))
+                custom = IntPrompt.ask("[red][?]﻿ENTER THE AMOUNT OF ANGLE YOU WANT[/red]")                
+                console.print("[red][%] HACKING CAR ANGLE[/red]: ", end=None)
+                if cpm.hack_car_tyre(car_id, custom):
                     console.print("[bold green]SUCCESFUL (✔)[/bold green]")
                     console.print("================================")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
