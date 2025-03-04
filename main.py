@@ -641,10 +641,10 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
             elif service == 29:
-                console.print("[bold yellow][!] Note[/bold yellow]: original speed can not be restored!.")
-                console.print("[bold cyan][!] Enter Car Details.[/bold cyan]")
+                console.print("[bold yellow][!] Note[/bold yellow]: Original Tyre Can Not Be Restored!.")
+                console.print("[bold cyan][!] Enter Car Details[/bold cyan]")
                 car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
-                console.print("[bold cyan][%] Hacking Car Speed[/bold cyan]:",end=None)
+                console.print("[bold cyan][%] Setting Car Tyre To 0[/bold cyan]:",end=None)
                 if cpm.hack_car_tyre(car_id):
                     console.print("[bold green]SUCCESFUL (✔)[/bold green]")
                     console.print("================================")
