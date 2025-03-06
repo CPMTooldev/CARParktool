@@ -684,7 +684,7 @@ if __name__ == "__main__":
                 console.print("[bold]ENTER NEW BRAKE![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]﻿ENTER BRAKE U WANT[/bold blue]")                
                 console.print("[bold red][%] Setting BRAKE [/bold red]: ", end=None)
-                if amount > 0 and amount <= 6000:
+                if amount > 0 and custom <= 6000:
                 if cpm.brake_car(car_id, custom):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
