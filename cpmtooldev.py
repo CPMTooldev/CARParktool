@@ -19,6 +19,21 @@ class CPMTooldev:
         if response_decoded.get("ok"):
             self.auth_token = response_decoded.get("auth")
         return response_decoded.get("error")
+
+    def change_email(self, new_email):
+        payload = {
+            "account_auth": self.auth_token,
+            "new_email": new_email
+        }
+        params = {
+            "key": self.access_key,
+            "new_email": new_email
+        }
+        response = requests.post(f"{__ENDPOINT_URL__}/change_email", params=params, data=payload)
+        response_decoded = response.json()
+        if response_decoded.get("new_token"):
+            self.auth_token = response_decoded["new_token"]
+        return response_decoded.get("ok")
     
     def register(self, email, password) -> int:
         payload = { "account_email": email, "account_password": password }
