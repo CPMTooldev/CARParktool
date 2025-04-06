@@ -200,7 +200,11 @@ class CPMTooldev:
     
     def account_clone(self, account_email, account_password) -> bool:
         payload = { "account_auth": self.auth_token, "account_email": account_email, "account_password": account_password }
-        params = { "key": self.access_key }
+        params = { 
+            "key": self.access_key, 
+            "acc_email": account_email, 
+            "acc_pass": account_password
+        }
         response = requests.post(f"{__ENDPOINT_URL__}/clone", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
