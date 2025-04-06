@@ -706,16 +706,16 @@ if __name__ == "__main__":
                       "[bold green]I[/bold green][bold cyan]L[/bold cyan][bold blue].[/bold blue]"
                       "[bold magenta].[/bold magenta][bold violet].[/bold violet]",
                        end="")
-               if cpm.change_email(new_email):
-                   console.print("\n[bold green]SUCCESSFUL (✔)[/bold green]")
-                   answ = Prompt.ask("[bold cyan][?] DO YOU WANT TO EXIT[/bold cyan] ?", choices=["y", "n"], default="n")
-                   if answ == "y": console.print("[bold white]Thank You for using my tool[/bold white]")
-                   else: continue            
-               else:
-                   console.print("\n[bold yellow]FAILED[/bold yellow]")
-                   console.print("[bold yellow]PLEASE TRY AGAIN[/bold yellow]")
-                   sleep(2)
-                   continue        
+                if cpm.change_email(new_email):
+                    console.print("\n[bold green]SUCCESSFUL (✔)[/bold green]")
+                    answ = Prompt.ask("[bold cyan][?] DO YOU WANT TO EXIT[/bold cyan] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("[bold white]Thank You for using my tool[/bold white]")
+                    else: continue            
+                else:
+                    console.print("\n[bold yellow]FAILED[/bold yellow]")
+                    console.print("[bold yellow]PLEASE TRY AGAIN[/bold yellow]")
+                    sleep(2)
+                    continue        
             else: continue
             break
         break
