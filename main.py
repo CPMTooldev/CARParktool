@@ -194,6 +194,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{29}: Custom Tire burner       1.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{30}: Custom Car Millage       2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{31}: Custom Car Brake         2K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{32}: Change Account Email     2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ ʙᴀʟᴅᴀɴ ]==============='))
@@ -696,7 +697,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
             elif service == 32:
-                console.print("[bold magenta]Enter New Email![/bold magenta]")
+                console.print("[bold]Enter New Email![/bold]")
                 new_email = prompt_valid_value("[bold cyan][?] Account New Email[/bold cyan]", "Email", password=False)
                 console.print(
                       "[bold red]C[/bold red][bold dark_orange]H[/bold dark_orange][bold yellow]A[/bold yellow]"
@@ -708,12 +709,12 @@ if __name__ == "__main__":
                        end="")
                 if cpm.change_email(new_email):
                     console.print("\n[bold green]SUCCESSFUL (✔)[/bold green]")
-                    answ = Prompt.ask("[bold cyan][?] DO YOU WANT TO EXIT[/bold cyan] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("[bold white]Thank You for using my tool[/bold white]")
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("[bold]Thank You for using our tool[/bold]")
                     else: continue            
                 else:
-                    console.print("\n[bold yellow]FAILED[/bold yellow]")
-                    console.print("[bold yellow]PLEASE TRY AGAIN[/bold yellow]")
+                    console.print("\n[bold red]FAILED[/bold red]")
+                    console.print("[bold]EMAIL IS ALREADY REGISTERED[/bold]")
                     sleep(2)
                     continue        
             else: continue
