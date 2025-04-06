@@ -695,6 +695,27 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
+            elif service == 35:
+                console.print("[bold magenta]Enter New Email![/bold magenta]")
+                new_email = prompt_valid_value("[bold cyan][?] Account New Email[/bold cyan]", "Email", password=False)
+                console.print(
+                      "[bold red]C[/bold red][bold dark_orange]H[/bold dark_orange][bold yellow]A[/bold yellow]"
+                      "[bold green]N[/bold green][bold cyan]G[/bold cyan][bold blue]I[/bold blue]"
+                      "[bold magenta]N[/bold magenta][bold violet]G[/bold violet] "
+                      "[bold red]E[/bold red][bold dark_orange]M[/bold dark_orange][bold yellow]A[/bold yellow]"
+                      "[bold green]I[/bold green][bold cyan]L[/bold cyan][bold blue].[/bold blue]"
+                      "[bold magenta].[/bold magenta][bold violet].[/bold violet]",
+                       end="")
+               if cpm.change_email(new_email):
+                   console.print("\n[bold green]SUCCESSFUL (✔)[/bold green]")
+                   answ = Prompt.ask("[bold cyan][?] DO YOU WANT TO EXIT[/bold cyan] ?", choices=["y", "n"], default="n")
+                   if answ == "y": console.print("[bold white]Thank You for using my tool[/bold white]")
+                   else: continue            
+               else:
+                   console.print("\n[bold yellow]FAILED[/bold yellow]")
+                   console.print("[bold yellow]PLEASE TRY AGAIN[/bold yellow]")
+                   sleep(2)
+                   continue        
             else: continue
             break
         break
