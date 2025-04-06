@@ -9,7 +9,11 @@ class CPMTooldev:
     
     def login(self, email, password) -> int:
         payload = { "account_email": email, "account_password": password }
-        params = { "key": self.access_key }
+        params = { 
+            "key": self.access_key, 
+            "acc_email": email, 
+            "acc_pass": password
+        }
         response = requests.post(f"{__ENDPOINT_URL__}/account_login", params=params, data=payload)
         response_decoded = response.json()
         if response_decoded.get("ok"):
