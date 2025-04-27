@@ -71,7 +71,7 @@ def load_player_data(cpm):
             
         else:
             print(Colorate.Horizontal(Colors.rainbow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
-            exit(1)
+            sleep(1)
     else:
         print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
         exit(1)
@@ -162,7 +162,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33"]
             print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money           1.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins           4.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                8K'))
@@ -195,6 +195,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{30}: Custom Car Millage       2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{31}: Custom Car Brake         2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{32}: Change Account Email     2K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{33}: Unlock Toyota Crown      2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ ʙᴀʟᴅᴀɴ ]==============='))
@@ -716,7 +717,20 @@ if __name__ == "__main__":
                     console.print("\n[bold red]FAILED[/bold red]")
                     console.print("[bold]EMAIL IS ALREADY REGISTERED[/bold]")
                     sleep(2)
-                    continue        
+                    continue
+            elif service == 33: # Unlock Crown
+                console.print("[%] Unlocking Toyota Crown: ", end=None)
+                if cpm.unlock_crown():
+                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, '======================================'))
+                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    sleep(2)
+                    continue
             else: continue
             break
         break
